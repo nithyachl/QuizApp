@@ -1,5 +1,66 @@
 <resources>
 
     <string name="app_name">Quiz App</string>
+    <string-array
+        name="arrayEasy">
+        <item> What is the captial of Italy? </item>
+        <item> Which fictional city is the home of Batman? </item>
+    </string-array>
+
+    <string-array
+        name="arrayEasyAns">
+        <item> Venice </item>
+        <item> Rome </item>
+        <item> Milan </item>
+        <item> Florence </item>
+        <item> Gotham City</item>
+        <item> Forest Hills</item>
+        <item> Malibu</item>
+        <item> Dayton </item>
+        <item> Elmherst </item>
+
+    </string-array>
+
+    <string-array
+        name="arrayMedium">
+        <item> Hi TJ! </item>
+        <item> Hi mom! </item>
+        <item> Hi nik! </item>
+    </string-array>
+
+    <string-array
+        name="arrayMediumAns">
+        <item> Hi TJ! </item>
+        <item> Hi mom! </item>
+        <item> Hi nik! </item>
+    </string-array>
+
+    <string-array
+        name="arrayHard">
+        <item> Hi TJ! </item>
+        <item> Hi mom! </item>
+        <item> Hi nik! </item>
+    </string-array>
+
+    <string-array
+        name="arrayHardAns">
+        <item> Hi TJ! </item>
+        <item> Hi mom! </item>
+        <item> Hi nik! </item>
+    </string-array>
+
+    <string-array
+        name="arrayVeryHard">
+        <item> Hi TJ! </item>
+        <item> Hi mom! </item>
+        <item> Hi nik! </item>
+    </string-array>
+
+    <string-array
+        name="arrayVeryHardAns">
+        <item> Hi TJ! </item>
+        <item> Hi mom! </item>
+        <item> Hi nik! </item>
+    </string-array>
 
 </resources>
