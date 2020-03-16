@@ -1,8 +1,11 @@
 package com.chintalapatinithya.firstapp.quizapp;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.widget.Button;
 import android.util.Log;
 import android.view.View;
@@ -16,11 +19,13 @@ public class MainActivity extends AppCompatActivity {
     int currentScore;
     String correctAnswer;
     TextView currentQuestion;
-    TextView nextQuestion;
+    Button nextQuestion;
     Button optionOne;
     Button optionTwo;
     Button optionThree;
     Button optionFour;
+    TextView score;
+    TextView curScore;
     int i = 0;
     int x =0;
     String[] arrayEasy;
@@ -41,8 +46,14 @@ public class MainActivity extends AppCompatActivity {
         optionTwo = findViewById(R.id.optionTwo);
         optionThree = findViewById(R.id.optionThree);
         optionFour = findViewById(R.id.optionFour);
+        score = findViewById(R.id.score);
+        curScore = findViewById(R.id.curScore);
         highScore = 0;
         currentScore = 0;
+
+        curScore.setText(currentScore + "");
+
+
         if(i == 0)
         {
             currentQuestion.setText("Which Difficulty?");
@@ -54,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     arrayEasy = getResources().getStringArray(R.array.arrayEasy);
-                    System.out.println("test: 1");
+                //     System.out.println("test: 1");
                 }
             });
 
@@ -62,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     arrayMedium = getResources().getStringArray(R.array.arrayMedium);
-                    arrayMediumAns = getResources().getStringArray(R.array.arrayMediumAns);
+
                 }
             });
 
@@ -70,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     arrayHard = getResources().getStringArray(R.array.arrayHard);
-                    arrayHardAns = getResources().getStringArray(R.array.arrayHardAns);
+
                 }
             });
 
@@ -78,121 +89,215 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     arrayVeryHard = getResources().getStringArray(R.array.arrayVeryHard);
-                    arrayVeryHardAns = getResources().getStringArray(R.array.arrayVeryHardAns);
+
                 }
             });
 
         }
 
+        optionOne.setOnTouchListener(new View.OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (i != 0) {
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        optionOne.setBackgroundColor(Color.GRAY);
+
+                    }
+
+                    if (optionOne.getText().equals(correctAnswer)) {
+                        optionOne.setBackgroundColor(Color.GREEN);
+                        currentScore++;
+                        curScore.setText(currentScore + "");
+                        SystemClock.sleep(500);
 
 
+
+                    } else {
+                        // Change the background color here
+                        optionOne.setBackgroundColor(Color.RED);
+                        SystemClock.sleep(500);
+                        //optionOne.setBackgroundColor(Color.RED);
+
+                        nextQuestion();
+
+
+                    }
+
+                }
+                    return false;
+
+            }
+
+
+        });
+
+        optionTwo.setOnTouchListener(new View.OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (i != 0) {
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        optionTwo.setBackgroundColor(Color.GRAY);
+                    }
+                    if (optionTwo.getText().equals(correctAnswer)) {
+                        optionTwo.setBackgroundColor(Color.GREEN);
+                        currentScore++;
+                        curScore.setText(currentScore + "");
+                        SystemClock.sleep(500);
+
+                    } else {
+                        // Change the background color here
+                        optionTwo.setBackgroundColor(Color.RED);
+                        SystemClock.sleep(500);
+                        //optionThree.setBackgroundColor(Color.RED);
+
+                        nextQuestion();
+
+
+                    }
+
+                }
+                return false;
+
+            }
+
+
+        });
+
+        optionThree.setOnTouchListener(new View.OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (i != 0) {
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        optionThree.setBackgroundColor(Color.GRAY);
+                    }
+
+                    if (optionThree.getText().equals(correctAnswer)) {
+                        optionThree.setBackgroundColor(Color.GREEN);
+                        currentScore++;
+                        curScore.setText(currentScore + "");
+                        SystemClock.sleep(500);
+
+                    } else {
+                        // Change the background color here
+                        optionThree.setBackgroundColor(Color.RED);
+                        SystemClock.sleep(500);
+                      //  optionThree.setBackgroundColor(Color.RED);
+                        nextQuestion();
+
+
+                    }
+
+                }
+                return false;
+
+            }
+
+
+        });
+
+        optionFour.setOnTouchListener(new View.OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (i != 0) {
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        optionFour.setBackgroundColor(Color.GRAY);
+                    }
+
+                    if (optionFour.getText().equals(correctAnswer)) {
+                        optionFour.setBackgroundColor(Color.GREEN);
+                        currentScore++;
+                        curScore.setText(currentScore + "");
+                        SystemClock.sleep(500);
+
+                    } else {
+                        // Change the background color here
+                        optionFour.setBackgroundColor(Color.RED);
+                        SystemClock.sleep(500);
+                       // optionThree.setBackgroundColor(Color.RED);
+                        nextQuestion();
+
+
+                    }
+
+                }
+                return false;
+
+            }
+
+
+        });
 
         nextQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("test:  next");
+               // System.out.println("test:  next");
                 //   if(nextQuestion.isPressed()) {
-                if(arrayEasy != null && i < arrayEasy.length) {
-                    currentQuestion.setText(arrayEasy[i]);
-                    optionOne.setText(arrayEasy[++i]);
-                    optionTwo.setText(arrayEasy[++i]);
-                    optionThree.setText(arrayEasy[++i]);
-                    optionFour.setText(arrayEasy[++i]);
-
-                    correctAnswer = arrayEasy[++i];
-
-
+                if (nextQuestion.isPressed()) {
+                    nextQuestion();
+                    //curScore.setText(currentScore);
 
                 }
-
-                if (arrayMedium != null && i < arrayMedium.length) {
-                    currentQuestion.setText(arrayMedium[i]);
-                    optionOne.setText(arrayMediumAns[x]);
-                    optionTwo.setText(arrayMediumAns[x++]);
-                    optionThree.setText(arrayMediumAns[x++]);
-                    optionFour.setText(arrayMediumAns[x++]);
-
-                }
-
-
-                if (arrayHard != null && i < arrayHard.length) {
-                    currentQuestion.setText(arrayHard[i]);
-                    optionOne.setText(arrayHardAns[x]);
-                    optionTwo.setText(arrayHardAns[x++]);
-                    optionThree.setText(arrayHardAns[x++]);
-                    optionFour.setText(arrayHardAns[x++]);
-
-                }
-
-
-                if (arrayHard != null && i < arrayHard.length) {
-                    currentQuestion.setText(arrayHard[i]);
-                    optionOne.setText(arrayVeryHardAns[x]);
-                    optionTwo.setText(arrayVeryHardAns[x++]);
-                    optionThree.setText(arrayVeryHardAns[x++]);
-                    optionFour.setText(arrayVeryHardAns[x++]);
-
-                }
-
             }
             // }
 
         });
 
-        optionOne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("test:  one");
-                if(i != 0) {
-                    if (optionOne.getText().equals(correctAnswer)) {
-                        optionOne.setBackgroundColor(Color.parseColor("#2EFE2E"));
-                        currentScore++;
-                    } else
-                        optionOne.setBackgroundColor(Color.parseColor("#FE2E2E"));
-                }
-            }
-        });
+    }
 
-        optionTwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(i !=0) {
-                    if (optionTwo.getText().equals(correctAnswer)) {
-                        optionTwo.setBackgroundColor(Color.parseColor("#2EFE2E"));
-                        currentScore++;
-                    } else
-                        optionTwo.setBackgroundColor(Color.parseColor("#FE2E2E"));
-                }
-            }
-        });
+    private void nextQuestion() {
+        if (arrayEasy != null && i < arrayEasy.length) {
 
-        optionThree.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if( i != 0)
-                {
-                    if (optionThree.getText().equals(correctAnswer)) {
-                        optionThree.setBackgroundColor(Color.parseColor("#2EFE2E"));
-                        currentScore++;
-                    } else
-                        optionThree.setBackgroundColor(Color.parseColor("#FE2E2E"));
-                }
-            }
-        });
+            optionFour.setBackgroundColor(Color.GRAY);
+            optionThree.setBackgroundColor(Color.GRAY);
+            optionTwo.setBackgroundColor(Color.GRAY);
+            optionOne.setBackgroundColor(Color.GRAY);
 
-        optionFour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(i != 0) {
-                    if (optionFour.getText().equals(correctAnswer)) {
-                        optionFour.setBackgroundColor(Color.parseColor("#2EFE2E"));
-                    } else
-                        optionFour.setBackgroundColor(Color.parseColor("#FE2E2E"));
-                }
-            }
-        });
+            currentQuestion.setText(arrayEasy[i]);
+            optionOne.setText(arrayEasy[++i]);
+            optionTwo.setText(arrayEasy[++i]);
+            optionThree.setText(arrayEasy[++i]);
+            optionFour.setText(arrayEasy[++i]);
+
+            //curScore.setText(currentScore);
+
+            correctAnswer = arrayEasy[++i];
+            i++;
 
 
+        }
+
+        if (arrayMedium != null && i < arrayMedium.length) {
+            currentQuestion.setText(arrayMedium[i]);
+            optionOne.setText(arrayMediumAns[x]);
+            optionTwo.setText(arrayMediumAns[x++]);
+            optionThree.setText(arrayMediumAns[x++]);
+            optionFour.setText(arrayMediumAns[x++]);
+
+        }
+
+
+        if (arrayHard != null && i < arrayHard.length) {
+            currentQuestion.setText(arrayHard[i]);
+            optionOne.setText(arrayHardAns[x]);
+            optionTwo.setText(arrayHardAns[x++]);
+            optionThree.setText(arrayHardAns[x++]);
+            optionFour.setText(arrayHardAns[x++]);
+
+        }
+
+
+        if (arrayHard != null && i < arrayHard.length) {
+            currentQuestion.setText(arrayHard[i]);
+            optionOne.setText(arrayVeryHardAns[x]);
+            optionTwo.setText(arrayVeryHardAns[x++]);
+            optionThree.setText(arrayVeryHardAns[x++]);
+            optionFour.setText(arrayVeryHardAns[x++]);
+
+        }
     }
 
 

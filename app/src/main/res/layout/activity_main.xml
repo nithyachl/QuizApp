@@ -24,8 +24,8 @@
     <TextView
         android:id="@+id/currentQuestion"
         android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:textSize="15dp"
+        android:layout_height="90dp"
+        android:textSize="20dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.992"
@@ -34,10 +34,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.131" />
 
-    <TextView
+    <Button
         android:id="@+id/nextQuestion"
-        android:layout_width="140dp"
-        android:layout_height="40dp"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
         android:textSize="20dp"
         android:text="Next Question"
         android:background="#81DAF5"
@@ -48,6 +48,21 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.904" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score:"
+        android:textSize="35dp" />
+
+    <TextView
+        android:id="@+id/curScore"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="95dp"
+        android:textSize="35dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -75,10 +90,10 @@
         android:id="@+id/optionTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
         android:textAllCaps="true"
         android:textColor="#318214"
-        app:layout_constraintHorizontal_bias="0.297"
+        android:textSize="15dp"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline"
@@ -88,11 +103,11 @@
         android:id="@+id/optionThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
         android:layout_marginTop="80dp"
         android:textAllCaps="true"
         android:textColor="#318214"
-        app:layout_constraintHorizontal_bias="0.641"
+        android:textSize="15dp"
+        app:layout_constraintHorizontal_bias="0.733"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline"
@@ -102,10 +117,10 @@
         android:id="@+id/optionFour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
         android:textAllCaps="true"
         android:textColor="#318214"
-        app:layout_constraintHorizontal_bias="0.945"
+        android:textSize="15dp"
+        app:layout_constraintHorizontal_bias="0.851"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline"

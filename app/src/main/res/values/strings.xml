@@ -3,31 +3,31 @@
     <string name="app_name">Quiz App</string>
     <string-array
         name="arrayEasy">
-        <item> What is the capital of Italy? </item>
+        <item> 1. What is the capital of Italy? </item>
         <item> Venice </item>
         <item> Rome </item>
         <item> Milan </item>
         <item> Florence </item>
         <item> Rome </item>
-        <item> Which fictional city is the home of Batman? </item>
+        <item> 2. Which fictional city is the home of Batman? </item>
         <item> Gotham City</item>
         <item> Forest Hills</item>
         <item> Malibu</item>
         <item> Dayton </item>
         <item> Gotham City</item>
-        <item>What city hosted the 2012 Olympics? </item>
+        <item> 3. What city hosted the 2012 Olympics? </item>
         <item> Rio De Janero, Brazil</item>
         <item> Beijing, China </item>
         <item>Tokyo, Japan</item>
         <item> London, England </item>
         <item> London, England </item>
-        <item>How many soccer players should be on the field at the same time? </item>
+        <item>4. How many soccer players should be on the field at the same time? </item>
         <item>23</item>
         <item>22</item>
         <item>24</item>
         <item>25</item>
         <item>22</item>
-        <item>Which NFL quarterback has won the most superbowls </item>
+        <item>5. Which NFL quarterback has won the most superbowls? </item>
         <item>Brett Farve</item>
         <item>Joe Montana</item>
         <item>Tom Brady</item>
@@ -35,47 +35,117 @@
         <item>Tom Brady</item>
     </string-array>
 
-
     <string-array
         name="arrayMedium">
-        <item> Hi TJ! </item>
-        <item> Hi mom! </item>
-        <item> Hi nik! </item>
+        <item> 1. What year was the very first model of the iPhone released? </item>
+        <item> 2006 </item>
+        <item> 2008 </item>
+        <item> 2007 </item>
+        <item> 2010 </item>
+        <item> 2007 </item>
+        <item> 2. Which email service is owned by Microsoft? </item>
+        <item> Gmail</item>
+        <item> Hotmail</item>
+        <item> Zoho</item>
+        <item> Proton Mail </item>
+        <item> Hotmail</item>
+        <item> 3. What is the symbol for potassium? </item>
+        <item> Fe </item>
+        <item> Si  </item>
+        <item> K </item>
+        <item> P </item>
+        <item> K </item>
+        <item>4. How many molecules of oxygen does ozone have? </item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>3</item>
+        <item>5. Which animal can be seen on the Porsche logo? </item>
+        <item>Gorilla</item>
+        <item>Monkey</item>
+        <item>Bull</item>
+        <item>Horse</item>
+        <item>Horse</item>
     </string-array>
 
-    <string-array
-        name="arrayMediumAns">
-        <item> Hi TJ! </item>
-        <item> Hi mom! </item>
-        <item> Hi nik! </item>
-    </string-array>
 
     <string-array
         name="arrayHard">
-        <item> Hi TJ! </item>
-        <item> Hi mom! </item>
-        <item> Hi nik! </item>
+        <item> 1. Which nation was said to invent hot dogs </item>
+        <item> Canada </item>
+        <item> France </item>
+        <item> Germany </item>
+        <item> USA </item>
+        <item> Germany </item>
+
+        <item> 2. What percentage of our bodies is made up of water? </item>
+        <item> 80% </item>
+        <item> 96%</item>
+        <item> 65%</item>
+        <item> 30%  </item>
+        <item> 65% </item>
+
+        <item> 3. What is your body’s largest organ? </item>
+        <item> Lungs </item>
+        <item> Heart </item>
+        <item> Skin </item>
+        <item> Brain </item>
+        <item> Skin </item>
+
+        <item>4. Which American state is the largest (by area)? </item>
+        <item>Idaho</item>
+        <item>California</item>
+        <item>Alaska</item>
+        <item>Texas</item>
+        <item>Alaska</item>
+
+        <item>5. How many Grammys does John Legend have? </item>
+        <item>4</item>
+        <item>8</item>
+        <item>10</item>
+        <item>6</item>
+        <item>10</item>
     </string-array>
 
-    <string-array
-        name="arrayHardAns">
-        <item> Hi TJ! </item>
-        <item> Hi mom! </item>
-        <item> Hi nik! </item>
-    </string-array>
 
     <string-array
         name="arrayVeryHard">
-        <item> Hi TJ! </item>
-        <item> Hi mom! </item>
-        <item> Hi nik! </item>
+        <item> 1. How many parts (screws and bolts included) does the average car have? </item>
+        <item> 2000 </item>
+        <item> 50000 </item>
+        <item> 10000 </item>
+        <item> 30000 </item>
+        <item> 30000 </item>
+
+        <item> 2. What does BMW stand for (in English)? </item>
+        <item> Barahv Motor Works</item>
+        <item> Baha Motor Works</item>
+        <item> Bavarian Motor Works</item>
+        <item> Bohmian Motor Works </item>
+        <item> Bavarian Motor Works </item>
+
+        <item> 3. Which country produces the most coffee in the world? </item>
+        <item> Brazil </item>
+        <item> Costa Rica  </item>
+        <item> Dominican Republic </item>
+        <item> Colombia </item>
+        <item> Brazil </item>
+
+        <item>4. How many films did Sean Connery play James Bond in? </item>
+        <item>4</item>
+        <item>7</item>
+        <item>8</item>
+        <item>6</item>
+        <item>7</item>
+
+        <item>5. How many eyes does a bee have? </item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>5</item>
     </string-array>
 
-    <string-array
-        name="arrayVeryHardAns">
-        <item> Hi TJ! </item>
-        <item> Hi mom! </item>
-        <item> Hi nik! </item>
-    </string-array>
 
 </resources>
